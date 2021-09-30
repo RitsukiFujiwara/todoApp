@@ -1,0 +1,31 @@
+@page
+@model ToDo.Pages.items.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>item</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.item.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.item.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.item.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.item.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.item.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
